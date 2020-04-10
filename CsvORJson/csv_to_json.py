@@ -12,4 +12,13 @@ class CsvToJson:
 
         
 
-    
+    def extract_head(self):
+        try:
+            return self.data[0].strip('\n').split(self.sep)
+        except Exception as e:
+            print(e)
+    def extract_body(self):
+        try:
+            return [b.strip('\n').split(self.sep) for b in self.data[1:]]
+        except Exception as e:
+            print(e)

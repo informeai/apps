@@ -12,8 +12,8 @@ from json_to_csv import JsonToCsv
 
 
 if __name__ == '__main__':
-    csv = CsvToJson('dados.csv')
-    head = csv.extract_head()
-    body = csv.extract_body()
-    print(head)
+    json = JsonToCsv('dados.json')
+    body = json.extract_body()
+    # body = json.extract_body()
     print(body)
+    # print(body)
