@@ -30,8 +30,6 @@ class JsonToCsv:
     def convert(self):
         self.keys = self.extract_head()
         self.body = self.extract_body()
-        print(self.keys)
-        print(self.body)
 
         text = ''
         for k in self.keys:
@@ -50,3 +48,8 @@ class JsonToCsv:
         
         return text + body
         
+    def save(self,path:str):
+        arq = open(path,'w')
+        text = self.convert()
+        arq.write(text)
+        arq.close()

@@ -45,4 +45,10 @@ class CsvToJson:
                     text = text[:-1]
             text += '},'
         text = text[:-1] + ']'
-        print(text)
+        return text
+
+    def save(self, path:str):
+        arq = open(path, 'w')
+        text = self.convert()
+        arq.write(text)
+        arq.close()
