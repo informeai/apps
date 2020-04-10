@@ -27,4 +27,4 @@ if len(num_bin) > 8:
 elif evaluate_num(num_bin):
     print('Number format not compost of 0 or 1')
 else:
-    pass
+    print(f'Number converted is -> {convert_num(num_bin)}')

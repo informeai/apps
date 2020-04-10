@@ -5,4 +5,4 @@ Transform binary for decimal.
 
 - [x] Create function for input numbers.
 - [x] Evaluate the number type.
-- [ ] Presentation of result to user. 
+- [x] Presentation of result to user. 
