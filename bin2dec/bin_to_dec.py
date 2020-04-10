@@ -28,3 +28,4 @@ elif evaluate_num(num_bin):
     print('Number format not compost of 0 or 1')
 else:
     print(f'Number converted is -> {convert_num(num_bin)}')
+    print('Finish.')
