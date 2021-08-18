@@ -12,6 +12,10 @@ class GithubStatus:
         except Exception as e:
             print(e)
 
+    def view_status(self):
+        status = self.status()
+        print("Name: {}\nUpdate: {}\nStatus: {}".format( status["page"]["name"], status["page"]["updated_at"], status["status"]["description"]))
+
     def sumary(self):
         try:
             req = requests.get('https://kctbh9vrtdwd.statuspage.io/api/v2/summary.json')
@@ -65,5 +69,6 @@ class GithubStatus:
 if __name__ == '__main__':
 
     github = GithubStatus()
-    sumary = github.sumary()
-    print(sumary)
+    # sumary = github.sumary()
+    github.view_status()
+    # print(sumary)
